@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif; /* Font chữ mặc định cho toàn bộ trang */
+  padding: 10px;
+  background: linear-gradient(to bottom, #6ad8e6 , rgb(227, 182, 189) ) ;  /* Light blue to light pink gradient */
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 25px;
+  text-align: center;
+  background: linear-gradient(to bottom, #b3ecf3, #f4dbdb); /* Light blue to light pink gradient for header */
+  color: #333; /* Darker text color for better contrast */
+}
+
+.header h1 {
+  font-size: 40px;
+  margin-bottom: 5px; /* Add some space below the title */
+  font-family: 'Playfair Display', serif; /* Font chữ tiêu đề */
+}
+
+.header p {
+  font-style: italic; /* Make the slogan italic */
+  color: #555; /* Slightly darker slogan text */
+  font-family: 'Georgia', 'Times New Roman', Times, serif; /* Font chữ slogan */
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #f07b84;
+  height: 55px; /* Increased height */
+  font-size: 18px; /* Increased font size */
+  position: sticky; /* Make it stick/fixed to the top */
+  top: 0; /* Stick to the top */
+  z-index: 100; /* Ensure it stays on top of other elements */
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-family:  sans-serif; /* Font chữ thanh điều hướng */
+  font-weight: bold; /* In đậm chữ ở thanh điều hướng */
+  text-transform: uppercase; /* Viết hoa chữ ở thanh điều hướng */
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 65%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 35%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  text-align: center; /* Center the text inside fakeimg */
+  color: white; /* White text for better visibility on grey background */
+  font-family: 'Lato', sans-serif; /* Font chữ cho nội dung fakeimg */
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: rgb(244, 235, 235);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px; /* Add some rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.card h2 {
+  color: #333; /* Darker heading text */
+  font-family: 'Merriweather', serif; /* Font chữ tiêu đề card */
+}
+
+.card h5 {
+  color: #777; /* Lighter date text */
+  margin-bottom: 10px; /* Add space below the date */
+  font-family: 'PT Serif', serif; /* Font chữ cho h5 (thông tin phụ) */
+  font-style: italic;
+}
+
+.card p {
+  font-family: 'Roboto', sans-serif; /* Font chữ cho nội dung card */
+  line-height: 1.6;
+}
+
+.card strong {
+  font-family: 'Roboto Slab', serif; /* Font chữ cho phần in đậm trong card */
+}
+
+.card a {
+  font-family: 'Roboto Slab', serif; /* Font chữ cho link trong card */
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.card img {
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+  display: block; /* Prevent extra space below image */
+  margin-bottom: 15px; /* Add space below the image */
+  border-radius: 3px; /* Slightly round the image corners */
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+  border-radius: 5px; /* Add rounded corners to the footer */
+  color: #555; /* Slightly darker footer text */
+  font-family: 'Vollkorn', serif; /* Font chữ cho footer */
+  font-size: 16px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&family=Georgia:ital@0;1&family=Merriweather:wght@400;700&family=Vollkorn:wght@400;700&family=Lato:wght@400;700&family=PT+Serif:wght@400;700&family=Roboto:wght@400&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="header">
+  <h1>VIỆT NAM TRONG TÔI</h1>
+  <p>Độc lập - Tự do - Hạnh phúc.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">TRANG CHỦ</a>
+  <a href="chude.html">KHÁM PHÁ</a>
+  <a href="gioithieubthan.html" >Liên hệ</a>
+  <a href="#"></a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>KHÁM PHÁ VẺ ĐẸP VIỆT NAM</h2>
+      <img src="vietnam.png" width="600" alt="VN">
+      <a href="https://vi.wikipedia.org/wiki/Vi%E1%BB%87t_Nam"><strong> NGUỒN:wikipedia </strong> </a>
+      <p>Chào mừng đến với trang blog "Việt Nam trong tôi"! Nơi đây, chúng tôi chia sẻ những câu chuyện, hình ảnh và trải nghiệm về đất nước Việt Nam tươi đẹp và con người thân thiện.</p>
+    </div>
+    <div class="card">
+      <h2>CON NGƯỜI VIỆT NAM</h2>
+      <img src="thanthien.png" height="150" alt="amthuc">
+      <a href="https://baoquocte.vn/vi-sao-viet-nam-nam-trong-10-diem-den-than-thien-nhat-the-gioi-2021-154629.html"><strong>NGUỒN:BAOQUOCTE </strong> </a>
+      <p>Không chỉ có cảnh quan tươi đẹp và ẩm thực độc đáo, Việt Nam còn nổi tiếng với những con người thân thiện, hiếu khách và giàu lòng nhân ái. Trải qua bao thăng trầm lịch sử, người Việt Nam vẫn giữ vững tinh thần lạc quan, cần cù và ý chí kiên cường.</p>
+      <p>Từ những người nông dân chân chất, những nghệ nhân tài hoa đến những trí thức ưu tú, mỗi người dân Việt Nam đều góp phần tạo nên bản sắc văn hóa đa dạng và phong phú của đất nước.</p>
+    </div>
+    <div class="card">
+      <h2>VĂN HÓA ẨM THỰC ĐA DẠNG</h2>
+      <img src="amthuc.jpg"  width="500" alt="amthuc">
+      <a href="https://www.klook.com/vi/blog/dac-san-viet-nam/"><strong>NGUỒN: "Klook" ĐẶC SẢN BA MIỀN </strong> </a>
+      <p>Ẩm thực Việt Nam nổi tiếng thế giới với sự đa dạng và hương vị độc đáo. Từ phở thơm ngon, bánh mì giòn rụm đến nem rán hấp dẫn, mỗi món ăn đều mang trong mình một câu chuyện văn hóa riêng.</p>
+      <p>Chúng tôi sẽ giới thiệu đến bạn những món ăn đặc sản của từng vùng miền, những quán ăn ngon và những bí quyết nấu nướng truyền thống.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Về chúng tôi</h2>
+      <img src="vietnamtrongtoi.png"  alt="vietnamtrongtoi" style="width:100%">
+      <p>Chúng tôi là những người yêu Việt Nam và mong muốn chia sẻ tình yêu đó với tất cả mọi người. Trang blog này là nơi chúng tôi ghi lại những hành trình khám phá và những cảm xúc chân thật về quê hương.</p>
+    </div>
+    <div class="card">
+      <h3>Bài viết nổi bật</h3>
+      <img src="canhdep.png"  alt="canhdep" style="width:100%">
+      <iframe width="100%" height="200" src="XIN CHAO VIET NAM - DU LỊCH XUYEN VIET - PHIÊN BẢN FLYCAM - HELLO VIET NAM.mp4" frameborder="0" allowfullscreen></iframe>
+      <p>Hãy cùng nhau khám phá những danh lam thắng cảnh hùng vĩ, những nét văn hóa truyền thống đặc sắc và những khoảnh khắc đáng nhớ trên khắp mọi miền Tổ quốc.</p>
+      <a href="https://www.youtube.com/@VirtualWorldVietnam"><strong>virtualworldvietnam.vn        </strong></a>
+    </div>
+    <div class="card">
+      <h3>Theo dõi chúng tôi</h3>
+      <p>Kết nối với chúng tôi trên mạng xã hội để không bỏ lỡ những bài viết mới nhất!</p>
+      <a href="#">Facebook</a><br>
+      <a href="#">Instagram</a><br>
+      <a href="#">Twitter</a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h3> © 2025 - Việt Nam trong tôi</h3>
+</div>
+
+</body>
+</html>

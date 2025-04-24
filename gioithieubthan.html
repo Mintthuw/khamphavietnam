@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web - Thông tin cá nhân</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif; /* Font chữ mặc định cho toàn bộ trang */
+            background: #058585;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 70vh;
+            margin: 0;
+            padding-top: 50px;
+        }
+
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: #f1727d;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            padding: 6px 0;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif; /* Đã thay đổi font chữ thanh điều hướng */
+            font-weight: bold; /* In đậm chữ ở thanh điều hướng */
+            text-transform: uppercase; /* Viết hoa chữ ở thanh điều hướng */
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #f06b6b;
+            color: rgb(220, 186, 186);
+        }
+
+        .container {
+            display: flex;
+            width: 88%;
+            max-width: 1200px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 15px;
+            padding:30px;
+        }
+
+        .form-container {
+            width: 100%;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif; /* Font chữ cho tiêu đề chính */
+            text-align: center;
+            margin-bottom: 13px;
+            color: #FF69B4;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif; /* Font chữ cho đoạn văn */
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        b {
+            font-weight: bold;
+        }
+
+        i {
+            font-style: italic;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif; /* Font chữ cho tiêu đề phụ */
+            color: rgb(236, 16, 16);
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Vollkorn', serif; /* Font chữ cho tiêu đề cấp 3 */
+            color: rgb(106, 180, 255);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-family: 'Lato', sans-serif; /* Font chữ cho tiêu đề cấp 4 */
+            color: rgb(215, 109, 17);
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            font-family: 'PT Serif', serif; /* Font chữ cho danh sách */
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .image-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .image-container div {
+            width: 330px;
+            height: 280px;
+            overflow: hidden;
+            border-radius: 10%;
+            box-shadow: 0px 15px 30px rgba(236, 182, 182, 0.678);
+            transition: all 0.3s ease;
+        }
+
+        .image-container div:hover {
+            transform: scale(1.1);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            font-family: 'Roboto Slab', serif; /* Font chữ cho liên kết */
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1 + p { /* Стиль для абзаца сразу после h1 */
+            font-style: italic;
+            color: #777;
+        }
+
+        /* Điều chỉnh cho màn hình nhỏ hơn nếu cần */
+        @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-container {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&family=Merriweather:wght@400;700&family=Vollkorn:wght@400;700&family=Lato:wght@400;700&family=PT+Serif:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="vietnamtrongtoi.html"><strong>TRANG CHỦ</strong></a>
+        <a href="chude.html"><strong>KHÁM PHÁ</strong></a>
+        <a href="gioithieubthan.html"><strong>LIÊN HỆ</strong></a>
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <div class="image-container">
+                <div>
+                    <img src="DSC09350.jpg" width="500" alt="Hình ảnh thu">
+                </div>
+                <div>
+                    <img src="giadinh.jpg" width="500" alt="Hình ảnh thu">
+                </div>
+            </div>
+
+
+            <h1>
+                <p>Họ và tên:<b>Mai Thị Minh Thư</b></p>
+                <p>Ngày sinh:<b>18/02/2007</b></p>
+                <p>Địa chỉ:<b> Kỳ Phương-Kỳ Anh-Hà Tĩnh.</b></p></h1>
+            <h3 style="color: rgb(236, 16, 16);"><i>I/ Học vấn :</i></h3>
+            <p>Đang là học Sinh lớp 12 của Trường Trung Học Phổ Thông Lương Thế Vinh.</p>
+            <h3 style="color:  rgb(236, 16, 16) ;"> <i>II/ Sở thích :</i></h3>
+            <ul>
+                <li>Nghe nhạc.</li>
+                <li>Xem phim.</li>
+                <li>Du lịch.</li>
+                <li>Đọc sách.</li>
+            </ul>
+
+            <div class="image-container">
+                <div>
+                    <img src="bien.jpg" alt="Hình ảnh biển">
+                </div>
+                <div>
+                    <img src="ho.jpg" alt="Hình ảnh ho">
+                </div>
+            </div>
+            <h3 style="color:  rgb(236, 16, 16) ;"> <i>III/Thành viên của Lớp 12A5 :</i></h3>
+            <p> Hiện đang là học sinh trường THPT lương Thế Vinh ( Quảng Bình) , thuộc chi đoàn 12A5 và đang là thành viên của tổ 1.</p>
+            <div class="image-container">
+                <div>
+                    <img src="Screenshot 2025-04-09 195554.png" width="500" alt="Hình ảnh thu">
+                </div>
+                <div>
+                    <img src="NPT00134.jpg" width="500" alt="Hình ảnh thu">
+                </div>
+                <div>
+                    <img src="to1.jpg" width="500" alt="Hình ảnh thu">
+                </div>
+            </div>
+
+            <p><h4  style="color: rgb(215, 109, 17) ;"> HIỂU HƠN VỀ CHÚNG TÔI (^3^) :
+                    <ul>
+                        <li><a href="https://www.instagram.com/a5.siudangiuu/?hl=en">instagram</a>.</li>
+                        <li><a href="https://www.tiktok.com/@a5siudangiuu">tiktok</a>.</li>
+
+                    </ul></h4></p>
+            <h3 style="color:  rgb(236, 16, 16) ;"> <i>IV/ Liên hệ :</i></h3>
+            <p>liên hệ: <a href="https://www.facebook.com/mai.thu.125945/about/">-Mintthư-</a></p>
+            <p>Gmail: maithiminhthu1822007@gmail.com</p>
+
+
+
+        </div>
+    </div>
+<h1>CẢM ƠN CÁC BẠN ĐÃ GHÉ THĂM  (^3^)</h1>
+</body>
+
+</html>

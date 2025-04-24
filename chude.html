@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám Phá Vẻ Đẹp Việt Nam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #3f2e2e;
+            line-height: 1.6;
+        }
+        header {
+            background-color: rgb(230, 36, 36) ;
+            color: rgb(24, 21, 21);
+            padding: 14px 15px;
+            text-align: center;
+            background-image: url('https://via.placeholder.com/1200x400/007bff/ffffff?Text=Chào+Mừng+Đến+Việt+Nam'); /* Thay thế bằng ảnh tiêu đề của bạn */
+            background-size: cover;
+            background-position: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color:#f07b84;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: rgb(242, 231, 231);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(158, 142, 142, 0.1);
+        }
+        .region-section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #c0b1b1;
+            padding-bottom: 30px;
+        }
+        .region-section h2 {
+            color: #e85612;
+            border-bottom: 2px solid #700606;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .location-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .location-item {
+            border: 1px solid #686262;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(225, 184, 184, 0.05);
+        }
+        .location-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .location-info {
+            padding: 15px;
+        }
+        .location-info h3 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.2em;
+        }
+        .location-info p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #e19191;
+            color: white;
+        }
+        /* Thêm hiệu ứng hover cho ảnh */
+        .location-item img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .location-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Khám Phá Vẻ Đẹp Việt Nam</h1>
+        <p>Một hành trình khám phá những miền đất tuyệt vời và con người thân thiện.</p>
+    </header>
+    
+    <nav>
+       
+    
+            
+              <li><a href="vietnamtrongtoi.html"><strong>TRANG CHỦ</strong></a></li> 
+               
+             
+           
+            <li><a href="#mien-bac">Miền Bắc</a></li>
+            <li><a href="#mien-trung">Miền Trung</a></li>
+            <li><a href="#mien-nam">Miền Nam</a></li>
+            <li><a href="gioithieubthan.html"><strong>LIÊN HỆ</strong></a></li>  
+        
+    </nav>
+
+    <div class="container">
+        <section id="mien-bac" class="region-section">
+            <h2>Vẻ Đẹp Miền Bắc</h2>
+            <p>Miền Bắc Việt Nam nổi tiếng với những dãy núi hùng vĩ, di sản văn hóa lâu đời và phong tục độc đáo của các dân tộc thiểu số.</p>
+            <div class="location-card">
+                <div class="location-item">
+                    <img src="vịnh hạ long.png" alt="Vịnh Hạ Long">
+                    <div class="location-info">
+                        <h3>Vịnh Hạ Long</h3>
+                        <p>Di sản thiên nhiên thế giới với hàng ngàn đảo đá vôi kỳ vĩ trên nền nước biển xanh ngọc bích.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="sapa.png" alt="Sapa">
+                    <div class="location-info">
+                        <h3>Sapa</h3>
+                        <p>Thị trấn sương mù với những thửa ruộng bậc thang tuyệt đẹp và văn hóa đa dạng của các dân tộc H'Mông, Dao, Tày, Giáy.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="hanoi.png" alt="Hà Nội">
+                    <div class="location-info">
+                        <h3>Hà Nội</h3>
+                        <p>Thủ đô ngàn năm văn hiến với những con phố cổ kính, hồ nước thơ mộng và ẩm thực đường phố đặc sắc.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="ninh binh.png" alt="Ninh Bình">
+                    <div class="location-info">
+                        <h3>Ninh Bình</h3>
+                        <p>Vùng đất với Tam Cốc - Bích Động, Tràng An non nước hữu tình và Cố đô Hoa Lư lịch sử.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="hagiang.png" alt="Hà Giang">
+                    <div class="location-info">
+                        <h3>Hà Giang</h3>
+                        <p>Cao nguyên đá Đồng Văn hùng vĩ với những cung đường đèo hiểm trở và cảnh quan thiên nhiên độc đáo.</p>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section id="mien-trung" class="region-section">
+            <h2>Vẻ Đẹp Miền Trung</h2>
+            <p>Miền Trung Việt Nam là sự kết hợp giữa những bãi biển dài tuyệt đẹp và những di sản văn hóa lịch sử.</p>
+            <div class="location-card">
+                <div class="location-item">
+                    <img src="phoco.png" alt="Hội An">
+                    <div class="location-info">
+                        <h3>Hội An</h3>
+                        <p>Phố cổ duyên dáng với những ngôi nhà mái ngói rêu phong và lồng đèn rực rỡ.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="hue.png" alt="Huế">
+                    <div class="location-info">
+                        <h3>Huế</h3>
+                        <p>Cố đô yên bình với những lăng tẩm cổ kính và sông Hương thơ mộng.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="danang.png" alt="Đà Nẵng">
+                    <div class="location-info">
+                        <h3>Đà Nẵng</h3>
+                        <p>Thành phố biển năng động với những bãi biển Mỹ Khê, Non Nước tuyệt đẹp và Cầu Rồng ấn tượng.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="nhatrang.png" alt="Nha Trang">
+                    <div class="location-info">
+                        <h3>Nha Trang</h3>
+                        <p>Thành phố biển với những hòn đảo xinh đẹp và hoạt động lặn biển hấp dẫn.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="quangbinh.png" alt="Quảng Bình">
+                    <div class="location-info">
+                        <h3>Quảng Bình</h3>
+                        <p>Vương quốc hang động với Sơn Đoòng, Phong Nha - Kẻ Bàng kỳ vĩ.</p>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section id="mien-nam" class="region-section">
+            <h2>Vẻ Đẹp Miền Nam</h2>
+            <p>Miền Nam Việt Nam nổi bật với sự trù phú của đồng bằng sông Cửu Long và nhịp sống sôi động của các thành phố lớn.</p>
+            <div class="location-card">
+                <div class="location-item">
+                    <img src="tphcm.png" alt="TP. Hồ Chí Minh">
+                    <div class="location-info">
+                        <h3>TP. Hồ Chí Minh</h3>
+                        <p>Thành phố năng động với kiến trúc Pháp cổ kính và cuộc sống hiện đại.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="kenhrach.png" alt="Đồng bằng Sông Cửu Long">
+                    <div class="location-info">
+                        <h3>Đồng bằng Sông Cửu Long</h3>
+                        <p>Vùng đất với những kênh rạch chằng chịt, chợ nổi độc đáo và vườn trái cây trĩu quả.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="phuquoc.png" alt="Phú Quốc">
+                    <div class="location-info">
+                        <h3>Phú Quốc</h3>
+                        <p>Đảo ngọc với những bãi biển cát trắng mịn và làn nước trong xanh.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="baria.jpg" alt="Vũng Tàu">
+                    <div class="location-info">
+                        <h3>Vũng Tàu</h3>
+                        <p>Thành phố biển gần TP.HCM với những bãi tắm đẹp và hải sản tươi ngon.</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <img src="muine.png" alt="Mũi Né">
+                    <div class="location-info">
+                        <h3>Mũi Né</h3>
+                        <p>Thiên đường nghỉ dưỡng với những đồi cát vàng và hoạt động thể thao biển.</p>
+                    </div>
+                </div>
+                </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Khám Phá Việt Nam. All rights reserved.</p>
+    </footer>
+</body>
+</html>
